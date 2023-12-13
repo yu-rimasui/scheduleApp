@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+:root {
+  --white-color: #dcdbda;
+  --black-color: #333;
+  --gray-color: #3e3e3e;
+  --primary-color: #d4cabd;
+  /* カテゴリのカラーメモ */
+  --none-color: #dcdbda;
+  --collage-color: #b3ccb1;
+  --exam-color: #ebebeb;
+  --work-color: #d5c78c;
+  --club-color: #e6c0bd;
+  --skillup-color: #a3c3d8;
+}
+
+body {
+  color: var(--white-color);
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Kiwi Maru", serif;
+}
+
+.wrap {
+  background: rgba(255, 255, 255, 0);
+}
+
+.weeklyCalendar {
+  /* todoリスト右側に設置したいからまた調整する */
+  width: 100%;
+  border: 2px solid var(--gray-color);
+}
+
+/* 曜日 */
+.weekTitle {
+  height: 30px;
+  border-bottom: 2px solid var(--gray-color);
+  display: flex;
+  justify-content: right;
+}
+.weekItem {
+  height: 30px;
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+}
+
+/* 内容 */
+.weekWrap {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+/* 時間軸 */
+.hourList {
+  width: 16%;
+  text-align: right;
+  padding-right: 4px;
+}
+.hourListItem {
+  height: 60px;
+  border-bottom: 1px solid var(--gray-color);
+}
+
+/* 日付 */
+.dayList {
+  width: 12%;
+}
+.dayListItem {
+  height: 60px;
+  border-left: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+}
+
+/* イベントボタン */
+.eventBtnWrap {
+  padding: 10px 20px 10px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.eventBtn {
+  color: var(--white-color);
+  background: rgba(62, 62, 62, 0);
+  border-color: var(--gray-color);
+  border-bottom: 3px solid var(--gray-color);
+}
+.eventBtn:hover {
+  margin-top: 2px;
+  background: rgba(62, 62, 62, 0);
+  border-color: #a2ff00;
+  border-bottom: 1px solid #a2ff00;
+}
+
+/* イベントバッジ */
+.schedule_event {
+  padding: 8px;
+  color: var(--gray-color);
+  width: 11.9%;
+  position: absolute;
+  white-space: wrap;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0px 0px 8px 2px rgba(255, 255, 255, 0.6);
+}
+.schedule_event p {
+  margin-bottom: 4px;
+}
+.schedule_event:hover {
+  background: var(--gray-color);
+}
